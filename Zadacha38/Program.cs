@@ -7,7 +7,7 @@ void FillArray(int[] array)
 {
     for (int i = 0; i < array.Length; i++)
     {
-        array[i] = new Random().Next(1, 21);
+        array[i] = new Random().Next(-15, 15);
         Console.Write(array[i]);
         Console.Write(", ");
     }
@@ -21,13 +21,13 @@ void FindMaxMin(int[] list)
         if(list[i] > max) max = list[i]; 
         else if (list[i] < min) min = list[i];
     }
-    int difference = max - min;
+    int difference = max - (min);
     Console.WriteLine($"Максимальное число: {max}");
     Console.WriteLine($"Минимально число: {min}");
     Console.WriteLine($"Разница между максимальным и минимальным числом: {difference}");
 }
 
-int[] array = new int[5];
+int[] array = new int[n];
 FillArray(array);
 Console.WriteLine();
 FindMaxMin(array);
